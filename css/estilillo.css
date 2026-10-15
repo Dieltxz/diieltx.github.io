@@ -1,0 +1,153 @@
+/* Se quitan márgenes y paddings generales de forma correcta */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #96bcee;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.header {
+    background-color: rgb(8, 2, 88);
+    height: 100px;
+    display: flex;             
+    justify-content: space-between; 
+    align-items: center;       
+    padding: 0 75px;           
+}
+
+.header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.header ul {
+    display: flex;
+    gap: 45px;
+    list-style: none;
+}
+
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+
+section article {
+    display: flex;             
+    align-items: center;      
+    gap: 20px;                
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+
+section article .info-texto {
+    display: flex;
+    flex-direction: column;    
+}
+
+section article img {
+    width: 150px;              
+    height: 150px;
+    object-fit: cover;         
+    border-radius: 8px;
+}
+
+.biografia {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    background-color: white;
+    color: black;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 1000px;
+    border-radius: 10px;
+    line-height: 1.8;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Título principal */
+.biografia h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(8, 2, 88);
+}
+
+/* Subtítulos */
+.biografia h2 {
+    margin-bottom: 15px;
+    color: rgb(8, 2, 88);
+}
+
+.biografia h3 {
+    margin: 15px 0;
+}
+
+/* Párrafos */
+.biografia p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* Texto de la biografía */
+.texto-biografia {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Fotografía de cada artista */
+.foto-mon,
+.foto-artista {
+    width: 220px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Diseño para celulares */
+@media (max-width: 600px) {
+    .biografia {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .foto-mon,
+    .foto-artista {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .texto-biografia {
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,209 @@
+:root {
+    --acento: #?bb?; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: "Segoe UI", system-ui, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 0;
+}
+#galeria {
+    width: min(1100px, 100%);
+    padding: 0 24px;
+}
+
+#galeria h1 {
+    font-size: 1.6rem;
+    margin-bottom: 4px;
+}
+
+#galeria p {
+    color: var(--suave);
+    margin-bottom: 20px;
+}
+
+.slider {
+    position: relative;
+}
+
+.pista {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 8px;
+}
+
+.pista::-webkit-scrollbar {
+    display: none;
+}
+
+.pista {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+}
+
+.pista::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  flex: 0 0 calc((100% - 32px) / 3);
+  scroll-snap-align: start;
+  background-color: var(--tarjeta);
+  border: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+.miniatura {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+}
+
+.miniatura video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.play {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background-color: #0f1b2d59;
+  transition: background .2s;
+}
+
+.play span {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: var(--acento);
+  display: grid;
+  place-items: center;
+  transition: transform .2s;
+}
+
+.play span::after {
+  content: "";
+  border-left: 16px solid #fff;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  margin-left: 4px;
+}
+
+.item:hover .play {
+  background-color: #0f1b2d26;
+}
+
+.item:hover .play span {
+  transform: scale(1.1);
+}
+
+.titulo {
+  padding: 12px 14px;
+  font-weight: 600;
+}
+
+.flecha {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 0;
+  background-color: var(--texto);
+  color: var(--fondo);
+  font-size: 1.4rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.flecha:hover {
+  background-color: var(--acento);
+  color: #fff;
+}
+
+.flecha.prev {
+  left: -14px;
+}
+
+.flecha.next {
+  right: -14px;
+}
+
+dialog {
+  border: 0;
+  border-radius: 12px;
+  background-color: #000;
+  width: min(900px, 94vw);
+  margin: auto;
+  overflow: visible;
+}
+
+dialog::backdrop {
+  background-color: #050a14d9;
+}
+
+dialog video {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  max-height: 80vh;
+}
+
+.cerrar {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 0;
+  background-color: var(--acento);
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .item {
+    flex-basis: calc((100% - 16px) / 2);
+  }
+}
+
+@media (max-width: 520px) {
+  .item {
+    flex-basis: 100%;
+  }
+
+  .flecha {
+    display: none;
+  }
+}
