@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de QR</title>
+    <link rel="stylesheet" href="css/qr.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="js/codigoqr.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Generador de codigo qr</h2>
+        <input type="text" id="textoinput" placeholder="Escribe una url o texto aqui.">
+        <br>
+        <button id="btngenerar">Generar QR</button>
+        <div id="codigoqr"></div>
+    </div>
+    
+</body>
+</html>
