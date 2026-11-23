@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Periódico Mural - El Porfiriato</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: #e8d8b5;
+    color: #34251b;
+}
+
+header {
+    background: #713c25;
+    color: #fff1cf;
+    text-align: center;
+    padding: 35px 15px;
+    border-bottom: 9px solid #c69b50;
+}
+
+header h1 {
+    font-size: 55px;
+    margin: 0;
+    text-shadow: 3px 3px #392014;
+}
+
+header p {
+    font-size: 19px;
+    letter-spacing: 3px;
+}
+
+.fecha {
+    background: #d4b477;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+main {
+    max-width: 1150px;
+    margin: 25px auto;
+    padding: 15px;
+}
+
+h2 {
+    color: #803e25;
+    border-bottom: 3px solid #b58a43;
+    padding-bottom: 7px;
+}
+
+.portada {
+    background: #f8edda;
+    border: 3px solid #a77b42;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.portada img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.portada h2 {
+    font-size: 30px;
+    border: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.seccion {
+    background: #fff5e3;
+    border: 2px solid #b58a43;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 3px 4px 6px #9d8464;
+}
+
+.seccion img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.seccion p, .seccion li {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.dato {
+    background: #713c25;
+    color: white;
+    padding: 22px;
+    text-align: center;
+    margin-top: 22px;
+    border-radius: 10px;
+}
+
+.dato h2 {
+    color: #ffe3a9;
+    border: none;
+}
+
+footer {
+    background: #392719;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 30px;
+}
+
+@media(max-width:700px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 37px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>EL PORFIRIATO</h1>
+    <p>HISTORIA • SOCIEDAD • CULTURA • POLÍTICA</p>
+</header>
+
+<div class="fecha">
+    EDICIÓN ESPECIAL | MÉXICO 1876 - 1911
+</div>
+
+<main>
+
+<section class="portada">
+    <h2>Una época que transformó a México</h2>
+    <img src="porfiriato.jpg" alt="Porfirio Díaz">
+    <p>
+        El Porfiriato fue un periodo de la historia de México en el que
+        Porfirio Díaz gobernó durante gran parte de los años comprendidos
+        entre 1876 y 1911. Se caracterizó por el crecimiento económico,
+        la modernización y también por la desigualdad social.
+    </p>
+</section>
+
+<div class="grid">
+
+<section class="seccion">
+    <h2>📜 ¿Qué fue el Porfiriato?</h2>
+    <p>
+        Fue una etapa histórica en la que Porfirio Díaz mantuvo el poder
+        durante más de 30 años, con una breve interrupción entre 1880 y
+        1884, cuando gobernó Manuel González.
+    </p>
+    <p>
+        Durante este periodo se impulsó la inversión extranjera,
+        la construcción de ferrocarriles y el crecimiento de algunas
+        industrias.
+    </p>
+</section>
+
+<section class="seccion">
+    <h2>👤 Porfirio Díaz</h2>
+    <img src="porfirio2.jpg" alt="Retrato de Porfirio Díaz">
+    <p>
+        José de la Cruz Porfirio Díaz Mori nació el 15 de septiembre
+        de 1830 en Oaxaca. Fue militar y político mexicano.
+        Llegó al poder en 1876 y permaneció como figura dominante
+        del gobierno hasta 1911.
+    </p>
+</section>
+
+<section class="seccion">
+    <h2>🚂 Avances tecnológicos</h2>
+    <img src="ferrocarril.jpg" alt="Ferrocarril antiguo">
+    <p>
+        Durante el Porfiriato hubo importantes cambios tecnológicos:
+    </p>
+    <ul>
+        <li>Construcción de vías ferroviarias.</li>
+        <li>Expansión del telégrafo.</li>
+        <li>Instalación de alumbrado eléctrico.</li>
+        <li>Desarrollo de fábricas e industrias.</li>
+        <li>Mejoras en algunos puertos y ciudades.</li>
+    </ul>
+</section>
+
+<section class="seccion">
+    <h2>⚖️ La sociedad durante el Porfiriato</h2>
+    <p>
+        Aunque el país tuvo crecimiento económico, los beneficios
+        no llegaron a todos por igual.
+    </p>
+    <ul>
+        <li>Los ricos y empresarios concentraban gran parte de la riqueza.</li>
+        <li>Muchos campesinos perdieron sus tierras.</li>
+        <li>Los trabajadores tenían bajos salarios y largas jornadas.</li>
+        <li>Existía poca libertad política.</li>
+    </ul>
+</section>
+
+<section class="seccion">
+    <h2>🎨 Cultura y educación</h2>
+    <p>
+        Durante esta época se construyeron edificios, teatros y
+        monumentos. La arquitectura recibió una fuerte influencia
+        europea, especialmente francesa.
+    </p>
+    <p>
+        También se impulsaron instituciones educativas y las
+        ciencias, aunque el acceso a la educación seguía siendo
+        desigual.
+    </p>
+</section>
+
+<section class="seccion">
+    <h2>🔥 El fin del Porfiriato</h2>
+    <p>
+        En 1910 comenzó la Revolución Mexicana, impulsada por el
+        descontento social y político. Francisco I. Madero se opuso
+        a la reelección de Díaz y llamó al levantamiento armado.
+    </p>
+    <p>
+        En mayo de 1911, Porfirio Díaz renunció a la presidencia
+        y salió del país.
+    </p>
+</section>
+
+</div>
+
+<section class="dato">
+    <h2>⭐ ¿Sabías que...?</h2>
+    <p>
+        Durante el Porfiriato se inauguró el Ángel de la Independencia
+        en la Ciudad de México, el 16 de septiembre de 1910,
+        como parte de las celebraciones del centenario
+        de la Independencia.
+    </p>
+</section>
+
+<section class="seccion" style="margin-top:22px">
+    <h2>📝 Conclusión</h2>
+    <p>
+        El Porfiriato fue una etapa de grandes transformaciones para
+        México. Aunque hubo avances económicos y tecnológicos,
+        también existieron injusticias, desigualdad y falta de
+        democracia. El descontento de la población contribuyó
+        al inicio de la Revolución Mexicana en 1910.
+    </p>
+</section>
+
+</main>
+
+<footer>
+    <h3>¡Conocer nuestra historia es comprender nuestro presente!</h3>
+    <p>Periódico mural escolar | Tema: El Porfiriato</p>
+</footer>
+
+</body>
+</html>
